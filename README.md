@@ -6,12 +6,13 @@ Small coding projects. These projects are designed to familiarize the developer 
 
 | Project Name | Difficulty | Date Started | Completion |
 | ---- | ---- | ---- | ---- |
+| Basic Pet Store Manager | Easy | October 2022 | Complete |
 | Number-Guessing Game | Easy | May 2026 | Complete |
 | Typing Game | Easy | May 2026 | Complete |
 | Button-Matching Game | Easy | June 2026 | Complete |
 | Stack-Based Calculator | Easy | June 2026 | Incomplete |
 | Mock Bank Application | Easy | June 2026 | Incomplete |
-| Text-Based Adventure Game | N/A | Easy | N/A | Planned |
+| Text-Based Adventure Game | Easy | June 2026 | Incomplete |
 | Pong | N/A | Easy | N/A | Planned |
 | Snake | N/A | Easy | N/A | Planned |
 | Running Game | N/A | Easy | N/A | Planned |
