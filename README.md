@@ -6,7 +6,7 @@ Small coding projects. These projects are designed to familiarize the developer 
 
 | Project Name | Difficulty | Date Started | Completion |
 | ---- | ---- | ---- | ---- |
-| Basic Pet Store Manager | Easy | October 2022 | Complete |
+| Console Pet Store Manager | Easy | October 2022 | Complete |
 | Number-Guessing Game | Easy | May 2026 | Complete |
 | Typing Game | Easy | May 2026 | Complete |
 | Button-Matching Game | Easy | June 2026 | Complete |
