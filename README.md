@@ -13,7 +13,7 @@ Small coding projects. These projects are designed to familiarize the developer 
 | Stack-Based Calculator | June 2026 | Incomplete |
 | Mock Bank Application | June 2026 | Incomplete |
 | Text-Based Adventure Game | June 2026 | Incomplete |
-| Snake Game | N/A | Planned |
+| Snake Game | June 2026 | Incomplete |
 | Pong Game | N/A | Planned |
 | Running Game | N/A | Planned |
 
