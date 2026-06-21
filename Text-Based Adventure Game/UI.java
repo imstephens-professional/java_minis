@@ -2,7 +2,7 @@ package lookheress;
 /*
  * Author: Isabella Stephens
  * Created: 19 June 2026
- * Updated: 19 June 2026
+ * Updated: 20 June 2026
  * 
  */
 
@@ -23,7 +23,7 @@ public class UI {
 	JButton startButton, chOne, chTwo, chThree, chFour;
 	JTextArea mainTextArea;
 	Font titleFont = new Font("Times New Roman", Font.PLAIN, 80);
-	Font normalFont = new Font("Times New ROman", Font.PLAIN, 26);
+	Font normalFont = new Font("Times New Roman", Font.PLAIN, 26);
 	
 	public void createUI(ChoiceHandler cHandler) {
 		// WINDOW
@@ -50,6 +50,8 @@ public class UI {
 		startButton.setForeground(Color.white);
 		startButton.setFont(normalFont);
 		startButton.setFocusPainted(false);
+		startButton.addActionListener(cHandler);
+		startButton.setActionCommand("start");
 		startButtonPanel.add(startButton);
 		
 		window.add(titleNamePanel);
@@ -82,24 +84,35 @@ public class UI {
 		chOne.setForeground(Color.white);
 		chOne.setFont(normalFont);
 		chOne.setFocusPainted(false);
+		chOne.addActionListener(cHandler);
+		chOne.setActionCommand("c1");
 		choiceButtonPanel.add(chOne);
+		
 		chTwo = new JButton("second choice");
 		chTwo.setBackground(Color.black);
 		chTwo.setForeground(Color.white);
 		chTwo.setFont(normalFont);
 		chTwo.setFocusPainted(false);
+		chTwo.addActionListener(cHandler);
+		chTwo.setActionCommand("c2");
 		choiceButtonPanel.add(chTwo);
+		
 		chThree = new JButton("third choice");
 		chThree.setBackground(Color.black);
 		chThree.setForeground(Color.white);
 		chThree.setFont(normalFont);
 		chThree.setFocusPainted(false);
+		chThree.addActionListener(cHandler);
+		chThree.setActionCommand("c3");
 		choiceButtonPanel.add(chThree);
+		
 		chFour = new JButton("fourth choice");
 		chFour.setBackground(Color.black);
 		chFour.setForeground(Color.white);
 		chFour.setFont(normalFont);
 		chFour.setFocusPainted(false);
+		chFour.addActionListener(cHandler);
+		chFour.setActionCommand("c4");
 		choiceButtonPanel.add(chFour);
 		
 		window.setVisible(true);
