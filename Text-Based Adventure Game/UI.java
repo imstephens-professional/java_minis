@@ -2,28 +2,30 @@ package lookheress;
 /*
  * Author: Isabella Stephens
  * Created: 19 June 2026
- * Updated: 20 June 2026
+ * Updated: 22 June 2026
  * 
  */
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
-import lookheress.Game.ChoiceHandler;
 import javax.swing.JLabel;
+import lookheress.Game.ChoiceHandler;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridLayout;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 public class UI {
 	JFrame window;
-	JPanel titleNamePanel, startButtonPanel, mainTextPanel, choiceButtonPanel;
-	JLabel titleNameLabel;
-	JButton startButton, chOne, chTwo, chThree, chFour;
+	JPanel titleNamePanel, startButtonPanel, restartButtonPanel, mainTextPanel, choiceButtonPanel, backgroundPanel;
+	JLabel titleNameLabel, backLabel;
+	JButton startButton, restartButton, chOne, chTwo, chThree, chFour;
 	JTextArea mainTextArea;
 	Font titleFont = new Font("Times New Roman", Font.PLAIN, 80);
 	Font normalFont = new Font("Times New Roman", Font.PLAIN, 26);
+	ImageIcon backPic;
 	
 	public void createUI(ChoiceHandler cHandler) {
 		// WINDOW
@@ -35,7 +37,7 @@ public class UI {
 		
 		// TITLE SCREEN
 		titleNamePanel = new JPanel();
-		titleNamePanel.setBounds(100, 100, 600, 500);
+		titleNamePanel.setBounds(90, 100, 600, 110);
 		titleNamePanel.setBackground(Color.black);
 		titleNameLabel = new JLabel("Quiet is the Deep");
 		titleNameLabel.setForeground(Color.white);
@@ -44,7 +46,7 @@ public class UI {
 		
 		startButtonPanel = new JPanel();
 		startButtonPanel.setBounds(300, 400, 200, 100);
-		startButtonPanel.setBackground(Color.black);
+		startButtonPanel.setOpaque(false); 
 		startButton = new JButton("Start");
 		startButton.setBackground(Color.black);
 		startButton.setForeground(Color.white);
@@ -60,12 +62,14 @@ public class UI {
 		// GAME SCREEN
 		mainTextPanel = new JPanel();
 		mainTextPanel.setBounds(100,100,600,250);
-		mainTextPanel.setBackground(Color.black);
+		//mainTextPanel.setBackground(Color.black);
+		mainTextPanel.setOpaque(false); 
 		window.add(mainTextPanel);
 		
 		mainTextArea = new JTextArea("This is the main text area");
 		mainTextArea.setBounds(100,100,600,250);
 		mainTextArea.setBackground(Color.black);
+		//mainTextArea.setOpaque(false); 
 		mainTextArea.setForeground(Color.white);
 		mainTextArea.setFont(normalFont);
 		mainTextArea.setLineWrap(true);
@@ -75,7 +79,8 @@ public class UI {
 		
 		choiceButtonPanel = new JPanel();
 		choiceButtonPanel.setBounds(250, 350, 300, 150);
-		choiceButtonPanel.setBackground(Color.black);
+		//choiceButtonPanel.setBackground(Color.black);
+		choiceButtonPanel.setOpaque(false); 
 		choiceButtonPanel.setLayout(new GridLayout(4,1));
 		window.add(choiceButtonPanel);
 		
@@ -115,6 +120,47 @@ public class UI {
 		chFour.setActionCommand("c4");
 		choiceButtonPanel.add(chFour);
 		
+		// RESTART BUTTON
+		restartButtonPanel = new JPanel();
+		restartButtonPanel.setBounds(300, 400, 200, 100);
+		restartButtonPanel.setOpaque(false); 
+		restartButton = new JButton("Restart");
+		restartButton.setBackground(Color.black);
+		restartButton.setForeground(Color.white);
+		restartButton.setFont(normalFont);
+		restartButton.setFocusPainted(false);
+		restartButton.addActionListener(cHandler);
+		restartButton.setActionCommand("restart");
+		restartButtonPanel.add(restartButton);
+		window.add(restartButtonPanel);
+		
+		// BACKGROUND ANIMATIONS
+		backgroundPanel = new JPanel();
+		backgroundPanel.setBounds(0, 0, 800, 600);
+		backLabel = new JLabel();
+		backLabel.setBounds(0, 0, 800, 600);
+		backgroundPanel.add(backLabel);
+		window.add(backgroundPanel);
+		
+		changeBackground();
+		
 		window.setVisible(true);
+	}
+	
+	public void changeBackground() {
+		backPic = new ImageIcon("Images/titleScreen.png");
+		backLabel.setIcon(backPic);
+		
+		/* backPic = new ImageIcon("Images/oceanTraversal_img.png"); backLabel.setIcon(backPic);
+		 * backPic = new ImageIcon("Images/swimUp_img.png"); backLabel.setIcon(backPic);
+		 * backPic = new ImageIcon("Images/breachSurface_img.png"); backLabel.setIcon(backPic);
+		 * backPic = new ImageIcon("Images/continueDeeper_img.png"); backLabel.setIcon(backPic);
+		 * backPic = new ImageIcon("Images/meetCaretaker_img.png"); backLabel.setIcon(backPic);
+		 * backPic = new ImageIcon("Images/askCaretaker_img.png"); backLabel.setIcon(backPic);
+		 * backPic = new ImageIcon("Images/finalDecision_img.png"); backLabel.setIcon(backPic);
+		 * backPic = new ImageIcon("Images/restingEnding_img.png"); backLabel.setIcon(backPic);
+		 * backPic = new ImageIcon("Images/fartherEnding_img.png"); backLabel.setIcon(backPic);
+		 * backPic = new ImageIcon("Images/theEndScreen_img.png"); backLabel.setIcon(backPic);
+		 */
 	}
 }
