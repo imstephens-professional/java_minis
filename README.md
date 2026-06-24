@@ -10,11 +10,15 @@ Small coding projects. These projects are designed to familiarize the developer 
 | Number-Guessing Game | May 2026 | Complete |
 | Typing Game | May 2026 | Complete |
 | Button-Matching Game | June 2026 | Complete |
+| Text-Based Adventure Game | June 2026 | Complete |
 | Stack-Based Calculator | June 2026 | Incomplete |
 | Mock Bank Application | June 2026 | Incomplete |
-| Text-Based Adventure Game | June 2026 | Incomplete |
 | Snake Game | June 2026 | Incomplete |
 | Pong Game | N/A | Planned |
 | Running Game | N/A | Planned |
+
+## How to Run
+Download all of the Java files and upload them to a package in a project's src folder.
+Download the folders associated with the Java files (Images, Icons, etc.).
 
 
