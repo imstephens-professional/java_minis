@@ -25,7 +25,8 @@ public class UI {
 	JTextArea mainTextArea;
 	Font titleFont = new Font("Times New Roman", Font.PLAIN, 80);
 	Font normalFont = new Font("Times New Roman", Font.PLAIN, 26);
-	ImageIcon backPic;
+	ImageIcon titleScreen_img, oceanTraversal_img, swimUp_img, breachSurface_img, continueDeeper_img, meetCaretaker_img,
+				askCaretaker_img, finalDecision_img, restingEnding_img, fartherEnding_img, theEndScreen_img;
 	
 	public void createUI(ChoiceHandler cHandler) {
 		// WINDOW
@@ -61,7 +62,7 @@ public class UI {
 		
 		// GAME SCREEN
 		mainTextPanel = new JPanel();
-		mainTextPanel.setBounds(100,100,600,250);
+		mainTextPanel.setBounds(100,30,600,500);
 		//mainTextPanel.setBackground(Color.black);
 		mainTextPanel.setOpaque(false); 
 		window.add(mainTextPanel);
@@ -142,25 +143,58 @@ public class UI {
 		backgroundPanel.add(backLabel);
 		window.add(backgroundPanel);
 		
-		changeBackground();
-		
 		window.setVisible(true);
 	}
 	
-	public void changeBackground() {
-		backPic = new ImageIcon("Images/titleScreen.png");
-		backLabel.setIcon(backPic);
-		
-		/* backPic = new ImageIcon("Images/oceanTraversal_img.png"); backLabel.setIcon(backPic);
-		 * backPic = new ImageIcon("Images/swimUp_img.png"); backLabel.setIcon(backPic);
-		 * backPic = new ImageIcon("Images/breachSurface_img.png"); backLabel.setIcon(backPic);
-		 * backPic = new ImageIcon("Images/continueDeeper_img.png"); backLabel.setIcon(backPic);
-		 * backPic = new ImageIcon("Images/meetCaretaker_img.png"); backLabel.setIcon(backPic);
-		 * backPic = new ImageIcon("Images/askCaretaker_img.png"); backLabel.setIcon(backPic);
-		 * backPic = new ImageIcon("Images/finalDecision_img.png"); backLabel.setIcon(backPic);
-		 * backPic = new ImageIcon("Images/restingEnding_img.png"); backLabel.setIcon(backPic);
-		 * backPic = new ImageIcon("Images/fartherEnding_img.png"); backLabel.setIcon(backPic);
-		 * backPic = new ImageIcon("Images/theEndScreen_img.png"); backLabel.setIcon(backPic);
-		 */
+	public void changeBackground(int choice) {
+		titleScreen_img = new ImageIcon("Images/titleScreen.png");
+		oceanTraversal_img = new ImageIcon("Images/oceanTraversal_img.png");
+		swimUp_img = new ImageIcon("Images/swimUp_img.png"); 
+		breachSurface_img = new ImageIcon("Images/breachSurface_img.png");
+		continueDeeper_img = new ImageIcon("Images/continueDeeper_img.png");
+		meetCaretaker_img = new ImageIcon("Images/meetCaretaker_img.png");
+		askCaretaker_img = new ImageIcon("Images/askCaretaker_img.png");
+		finalDecision_img = new ImageIcon("Images/finalDecision_img.png");
+		restingEnding_img = new ImageIcon("Images/restingEnding_img.png");
+		fartherEnding_img = new ImageIcon("Images/fartherEnding_img.png");
+		theEndScreen_img = new ImageIcon("Images/theEndScreen_img.png");
+			
+		switch(choice) {
+			case 1: 
+				backLabel.setIcon(titleScreen_img);
+				break;
+			case 2:
+				backLabel.setIcon(oceanTraversal_img);
+				break;
+			case 3:
+				backLabel.setIcon(swimUp_img);
+				break;
+			case 4:
+				backLabel.setIcon(breachSurface_img);
+				break;
+			case 5:
+				backLabel.setIcon(continueDeeper_img);
+				break;
+			case 6:
+				backLabel.setIcon(meetCaretaker_img);
+				break;
+			case 7:
+				backLabel.setIcon(askCaretaker_img);
+				break;
+			case 8:
+				backLabel.setIcon(finalDecision_img);
+				break;
+			case 9:
+				backLabel.setIcon(restingEnding_img);
+				break;
+			case 10:
+				backLabel.setIcon(fartherEnding_img);
+				break;
+			case 11:
+				backLabel.setIcon(theEndScreen_img);
+				break;
+			default:
+				backLabel.setIcon(titleScreen_img);
+		}
 	}
 }
