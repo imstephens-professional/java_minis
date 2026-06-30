@@ -14,8 +14,6 @@ Small coding projects. These projects are designed to familiarize the developer 
 | Stack-Based Calculator | June 2026 | Incomplete |
 | Mock Bank Application | June 2026 | Incomplete |
 | Snake Game | June 2026 | Incomplete |
-| Pong Game | N/A | Planned |
-| Running Game | N/A | Planned |
 
 ## How to Run
 Download all of the Java files and upload them to a package in a project's src folder.
