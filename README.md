@@ -2,7 +2,7 @@
 ## Description
 Small coding projects. These projects are designed to familiarize the developer with Java. These projects are developed in Eclipse Studio IDE (2026-03).
 
-## Projects (Start Date, & Completion Status)
+## Projects (Start Date & Completion Status)
 
 | Project Name | Date Started | Completion |
 | ---- | ---- | ---- |
